@@ -15,25 +15,34 @@
 
 <body id="home">
     <!--Container to Wrap Everything-->
-    <div id="container">
-        <header>
-            <div class="main-header">
-                <div class="logo">
-                    <img src="Project Requirements/images/logo-small.png" alt="Splashes Logo" width="150">
-                </div>
-               
-                <!--Main navigation menu-->
-                <nav class="main-menu">
-                    <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Locations</a></li>
-                        <li><a href="">Contact Us </a></li>
-                    </ul>
-                </nav>
+    <header class="site-header">
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="assets/images/logo-small.png" alt="Swimming School Logo">
             </div>
-        </header> <!--End of Header-->
-
+    
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Swim Programs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    
+            <!-- Register Button -->
+            <div class="nav-cta">
+                <a href="#" class="btn btn-primary">Register</a>
+            </div>
+    
+            <!-- Mobile Menu Icon -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
         <!--Main Content-->
         <main>
             <h2>Learning it the right way, </br> Right from the beginning </h2>

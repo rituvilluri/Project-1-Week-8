@@ -1,0 +1,65 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.site-header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 48px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #222;
+}
+
+.nav-links a.active {
+    font-weight: 700;
+}
+
+.nav-cta .btn {
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #0077cc;
+    color: #fff;
+}
+
+/* Mobile menu icon (hidden for now) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #222;
+}
