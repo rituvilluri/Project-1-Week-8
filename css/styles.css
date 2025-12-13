@@ -3,8 +3,11 @@
 ========================= */
 
 .site-header {
-    width: 100%;
-    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    /* ensures content doesn’t show through */
     border-bottom: 1px solid #e5e5e5;
 }
 
@@ -62,4 +65,60 @@
     width: 25px;
     height: 3px;
     background-color: #222;
+}
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    position: relative;
+    min-height: 520px;
+    background-image: url("../assets/images/home.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.hero-overlay h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.btn-light {
+    background-color: #ffffff;
+    color: #0077cc;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+/* =========================
+   REGISTER & HIRING BANNERS
+========================= */
+
+.register-banner,
+.hiring-banner {
+    width: 100%;
+}
+
+.register-banner img,
+.hiring-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
