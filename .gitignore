@@ -2,4 +2,6 @@
 **/.DS_Store
 **/.env
 **/.vscode
-
+.vscode/
+Project Requirements/
+Submission.rtf
