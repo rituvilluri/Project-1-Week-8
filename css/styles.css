@@ -1,0 +1,1112 @@
+/* ============================================================
+   STYLE GUIDE CUSTOM STYLES - given in requirement doc
+   ============================================================
+   
+   STYLE GUIDE COLOR and fonts 
+   - White: #FFFFFF
+   - Light Gray: #E4EAEA
+   - Dark Navy: #1A2E38
+   - Gray: #444444
+   - Medium Gray: #757576
+   - Primary Blue: #03B1F4
+   - Orange (Register Banner): #D4772C
+   
+   - Headings: Bodoni Moda (serif)
+   - Body: Open Sans (sans-serif)
+   
+   ============================================================ */
+
+/* =======================================
+   CSS (Variables)from style guide
+======================================== */
+:root {
+    /* Style Guide Colors */
+    --color-white: #FFFFFF;
+    --color-light-gray: #E4EAEA;
+    --color-dark-navy: #1A2E38;
+    --color-gray: #444444;
+    --color-medium-gray: #757576;
+    --color-primary-blue: #03B1F4;
+    --color-orange: #D4772C;
+    --color-red: #FF0000;
+    /* fonts from style guide */
+    --font-heading: 'Bodoni Moda', serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* =========================
+   BASE STYLING
+============================ */
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-gray);
+    background-color: var(--color-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-dark-navy);
+    line-height: 1.2;
+}
+
+a {
+    color: var(--color-primary-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #028acc;
+    text-decoration: underline;
+}
+
+/* =========================
+   BUTTON STYLES
+========================= */
+.btn {
+    font-family: var(--font-body);
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.btn-primary {
+    background-color: var(--color-primary-blue);
+    border-color: var(--color-primary-blue);
+    color: var(--color-white);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: transparent;
+    border-color: var(--color-primary-blue);
+    color: var(--color-primary-blue);
+}
+
+/* Light buttons with white background */
+.btn-light {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-white);
+    color: var(--color-primary-blue);
+}
+
+.btn-light:hover,
+.btn-light:focus {
+    background-color: transparent;
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-dark-navy);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Scrolled state */
+.site-header.scrolled {
+    background-color: #0f1a21;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    padding: 12px 0;
+}
+
+.navbar .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo brand area  */
+.navbar-brand {
+    margin-right: 40px !important;
+    flex-shrink: 0;
+}
+
+/* Logo image  */
+.logo-img {
+    height: 95px;
+    width: auto;
+    margin-right: 12px;
+}
+
+/* Navigation links */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-white) !important;
+    font-weight: 700 !important;
+    font-size: 1rem;
+    padding: 8px 10px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link {
+    color: var(--color-primary-blue) !important;
+}
+
+/* Register button in navbar */
+.btn-register {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-white);
+    color: var(--color-primary-blue);
+    font-weight: 700;
+    white-space: nowrap;
+    font-family: var(--font-body);
+}
+
+.btn-register:hover {
+    background-color: transparent;
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+
+/* =========================
+   HERO SECTION
+   - Full viewport height
+========================= */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('../assets/images/home.jpeg') center/cover no-repeat;
+    padding-top: 80px; /* Account for fixed header */
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 900 !important;
+    font-style: normal !important;
+    color: var(--color-white);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Hero video buttons - white background, blue text */
+.hero-actions .btn {
+    margin: 10px;
+    min-width: 200px;
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-white);
+    color: var(--color-primary-blue);
+    font-weight: 700;
+    font-family: var(--font-body);
+}
+
+.hero-actions .btn:hover {
+    background-color: transparent;
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+
+/* ==============================================
+   BANNERS SECTION
+   - Register Online and Hiring banners as cards
+============================================== */
+.banners-section {
+    padding: 20px 0 0;
+    background-color: var(--color-white);
+}
+
+.banners-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.banner-card {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.banner-card:hover {
+    text-decoration: none;
+    opacity: 0.95;
+}
+
+/* Register Online Banner */
+.register-banner img,
+.hiring-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==============================================
+   HANDS ON TEACHING SECTION
+   - Desktop (1200+): Background image on right, text on left
+   - Below 1200px: White card, no background image
+============================================== */
+.hands-on {
+    padding: 0;
+    background-color: var(--color-white);
+}
+
+.hands-on .row {
+    overflow: hidden;
+    background-color: var(--color-white);
+}
+
+.hands-on-content {
+    padding: 50px 40px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Image column - visible on desktop only */
+.hands-on-image-col {
+    display: none;
+}
+
+.hands-on-image {
+    height: 100%;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.hands-on-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--color-dark-navy);
+    margin-bottom: 20px;
+}
+
+.hands-on-content h3 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-dark-navy);
+    margin: 20px 0 10px;
+}
+
+.hands-on-content p {
+    color: var(--color-gray);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.hands-on-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.hands-on-content li {
+    margin-bottom: 5px;
+    color: var(--color-gray);
+    font-size: 0.95rem;
+}
+
+.hands-on-content li a {
+    color: var(--color-primary-blue);
+    text-decoration: underline;
+}
+
+.hands-on-content li a:hover {
+    text-decoration: none;
+}
+
+.btn-register-now {
+    margin-top: 15px;
+}
+
+
+/* ==============================================
+   FIND LOCATION SECTION
+   - Desktop (1200+): Text left, map right
+   - Below 1200px: Text centered, no map
+============================================== */
+.find-location {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    overflow: hidden;
+    background: url('../assets/images/home-our-locations-bg.jpeg') center/cover no-repeat;
+    position: relative;
+}
+
+.find-location::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 46, 56, 0.85);
+    z-index: 1;
+}
+
+.find-location-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 60px 50px;
+    color: var(--color-white);
+    position: relative;
+    z-index: 2;
+}
+
+.find-location-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-white);
+    margin-bottom: 20px;
+    line-height: 1.15;
+    max-width: 320px;
+}
+
+.find-location-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--color-white);
+    margin-bottom: 15px;
+    line-height: 1.2;
+    max-width: 280px;
+}
+
+.find-location-content p {
+    font-size: 0.9rem;
+    font-style: normal;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    max-width: 350px;
+}
+
+.find-location-content .btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+}
+
+.find-location-map {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.find-location-map img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==============================================
+   AWARDS SECTION
+   - Grid of award images (3 per row on desktop)
+============================================== */
+.awards {
+    padding: 60px 0;
+    margin: 0;
+    background-color: var(--color-white);
+}
+
+.awards .container {
+    padding: 0 20px;
+}
+
+.awards h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--color-dark-navy);
+    margin-bottom: 40px;
+}
+
+.awards-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.awards-grid img {
+    max-width: 130px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 3px solid var(--color-light-gray);
+    padding: 5px;
+    background: var(--color-white);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+    background-color: var(--color-white);
+    padding: 30px 0;
+}
+
+.footer-top {
+    padding: 40px 30px 30px;
+    background: linear-gradient(rgba(228, 234, 234, 0.85), rgba(228, 234, 234, 0.85)),
+                url('../assets/images/footer-bg.jpeg') center/cover no-repeat;
+    color: var(--color-dark-navy);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Wave logo centered */
+.footer-logo-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-wave {
+    height: 80px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Nav and Social row - flex layout */
+.footer-nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    gap: 5px 20px;
+}
+
+.footer-links li {
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--color-dark-navy);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: underline;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary-blue);
+}
+
+/* Social icons with original brand colors styling */
+.footer-social {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: var(--color-white);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.social-linkedin { background-color: #0077B5; }
+.social-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-twitter { background-color: #1DA1F2; }
+.social-yelp { background-color: #D32323; }
+.social-facebook { background-color: #1877F2; }
+.social-youtube { background-color: #FF0000; }
+
+.footer-social a:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* Locations with divider lines */
+.footer-locations-wrapper {
+    border-top: 1px solid rgba(26, 46, 56, 0.2);
+    border-bottom: 1px solid rgba(26, 46, 56, 0.2);
+    padding: 20px 0;
+    margin-top: 10px;
+}
+
+.footer-locations {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.location-item {
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+}
+
+.location-item strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-dark-navy);
+    margin-bottom: 3px;
+}
+
+.location-item a {
+    color: var(--color-primary-blue);
+    font-size: 0.85rem;
+    text-decoration: underline;
+}
+
+/* Footer bottom - sponsors and copyright */
+.footer-bottom {
+    background: linear-gradient(rgba(228, 234, 234, 0.85), rgba(228, 234, 234, 0.85)),
+                url('../assets/images/footer-bg.jpeg') center/cover no-repeat;
+    padding: 25px 30px;
+}
+
+.sponsors {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.sponsors img {
+    height: 60px;
+    width: auto;
+}
+
+.copyright-wrapper {
+    text-align: right;
+}
+
+.copy {
+    font-size: 0.75rem;
+    color: var(--color-gray);
+}
+
+/* ==============================================
+   PAGE HERO Styling
+   - Used for other pages (ex: Adult Programs)
+============================================== */
+.page-hero {
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 119px;
+}
+
+.page-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 177, 244, 0.35);
+    z-index: 1;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.page-hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--color-white);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   CONTENT SECTION
+   - other pages content
+   - White background, centered content
+========================= */
+.content-section {
+    padding: 60px 0;
+    background-color: var(--color-white);
+}
+
+.content-section .container {
+    max-width: 900px;
+}
+
+.content-wrapper {
+    padding: 0 20px;
+}
+
+.content-wrapper h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--color-dark-navy);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.content-wrapper p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-gray);
+    margin-bottom: 20px;
+}
+
+.content-wrapper .locations-heading {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-dark-navy);
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.content-wrapper .location-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content-wrapper .location-links li {
+    margin-bottom: 5px;
+}
+
+.content-wrapper .location-links li a {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-primary-blue);
+    text-decoration: none;
+}
+
+.content-wrapper .location-links li a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   MODAL STYLES
+   - Registration/Sign In modal
+========================= */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: var(--color-primary-blue);
+    color: var(--color-white);
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-header .close {
+    color: var(--color-white);
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-body .form-group label .required {
+    color: var(--color-red);
+    margin-left: 2px;
+}
+
+/* =========================
+   RESPONSIVE STYLES
+   - Desktop: 1200px and above
+   - Tablet: 577px - 1199px
+   - Mobile: 576px and below
+========================= */
+
+/* Desktop only (1200px and above) */
+@media (min-width: 1200px) {
+    /* Show image column on desktop */
+    .hands-on-image-col {
+        display: block;
+    }
+    
+    .hands-on-image {
+        height: 100%;
+        min-height: 550px;
+    }
+}
+
+/* Tablet and below (below 1200px) */
+@media (max-width: 1199.98px) {
+    .page-hero {
+        margin-top: 87px; 
+        min-height: 250px;
+    }
+    
+    .page-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .content-section {
+        padding: 50px 0;
+    }
+    
+    .content-wrapper h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Mobile menu dropdown */
+    .navbar-collapse {
+        background-color: var(--color-dark-navy);
+        padding: 30px 20px;
+        margin-top: 15px;
+        border-radius: 0;
+    }
+    
+    /* Nav items left-aligned */
+    .navbar-nav {
+        align-items: flex-start !important;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 15px 0;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    
+    /* Register button spans full width */
+    .nav-cta {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .nav-cta .btn-register {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    /* Hamburger icon styling */
+    .navbar-toggler {
+        border: none;
+        padding: 10px;
+    }
+    
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    
+    /* Orange hamburger when active/expanded */
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23D4772C' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    /* Logo smaller */
+    .logo-img {
+        height: 60px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-actions .btn {
+        display: block;
+        margin: 10px auto;
+    }
+    
+    /* Hands On - NO background image below 1200px */
+    .hands-on {
+        padding: 0;
+    }
+    
+    .hands-on-image-col {
+        display: none;
+    }
+    
+    .hands-on-content {
+        padding: 40px 30px;
+        max-width: 100%;
+    }
+    
+    .btn-register-now {
+        display: block;
+        width: fit-content;
+        margin: 20px auto 0;
+    }
+    
+    /* Find Location - centered text, no map */
+    .find-location {
+        margin: 0;
+    }
+    
+    .find-location-content {
+        text-align: center;
+        padding: 50px 30px;
+    }
+    
+    .find-location-content h2,
+    .find-location-content h3,
+    .find-location-content p {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .find-location-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .find-location-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .find-location-content .btn {
+        margin: 0 auto;
+    }
+    
+    /* Hide map below 1200px */
+    .find-location-map {
+        display: none;
+    }
+    
+    /* Add card-like shadows for smaller screens */
+    .banner-card {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hands-on .row {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .find-location {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Awards section */
+    .awards {
+        margin: 0;
+        padding: 50px 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Footer section */
+    .footer-nav-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    
+    .footer-locations {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .location-item {
+        min-width: auto;
+    }
+}
+
+/* Mobile (576px and below) */
+@media (max-width: 576px) {
+    .page-hero {
+        margin-top: 69px; 
+        min-height: 200px;
+    }
+    
+    .page-hero-content h1 {
+        font-size: 1.5rem;
+    }
+    .content-section {
+        padding: 35px 0;
+    }
+    
+    .content-wrapper {
+        padding: 0 15px;
+    }
+    
+    .content-wrapper h2 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    
+    .content-wrapper p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .content-wrapper .locations-heading {
+        font-size: 0.9rem;
+        margin-top: 25px;
+    }
+    
+    .content-wrapper .location-links li a {
+        font-size: 0.9rem;
+    }
+    
+    .logo-img {
+        height: 45px;
+        margin-right: 8px;
+    }
+    
+    .hero {
+        min-height: 80vh;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .hero-actions .btn {
+        min-width: 180px;
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+    
+    /* Banners */
+    .banners-section {
+        padding: 15px 0 0;
+    }
+    
+    .banner-card {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Hands On */
+    .hands-on .row {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Hands On */
+    .hands-on {
+        padding: 0;
+    }
+    
+    .hands-on-content {
+        padding: 25px 15px;
+    }
+    
+    .hands-on-content h2 {
+        font-size: 1.4rem;
+    }
+    
+    /* Find Location */
+    .find-location {
+        margin: 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Awards */
+    .awards {
+        margin: 0;
+        padding: 40px 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .find-location-content {
+        padding: 30px 20px;
+    }
+    
+    .find-location-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .find-location-content h3 {
+        font-size: 1rem;
+    }
+    
+    .find-location-content p {
+        font-size: 0.8rem;
+    }
+    
+    /* Awards images */
+    .awards-grid img {
+        max-width: 70px;
+        padding: 3px;
+        border-width: 2px;
+    }
+    
+    /* Footer section */
+    .site-footer {
+        padding: 15px 0;
+    }
+    
+    .footer-wave {
+        height: 55px;
+    }
+    
+    .footer-links {
+        gap: 5px 15px;
+    }
+    
+    .footer-links a {
+        font-size: 0.75rem;
+    }
+    
+    .footer-social a {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+    
+    .sponsors img {
+        height: 35px;
+    }
+    
+    .copyright-wrapper {
+        text-align: center;
+        margin-top: 15px;
+    }
+}

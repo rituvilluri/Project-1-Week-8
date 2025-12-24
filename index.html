@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splashes Swimming School</title>
+
+    <!-- Bootstrap 4 CSS  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome 5 - For social media and UI icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Google Fonts - Bodoni Moda for headings, Open Sans for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body id="home">
+
+    <!-- ============================================================
+         HEADER & NAVIGATION
+         - Sticky navbar that stays at top when scrolling
+         - Using Bootstrap navbar component with custom styling
+    ============================================================ -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-xl navbar-dark">
+            <div class="container">
+
+                <!-- Logo on nav bar -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="assets/images/logo-small.png" alt="Splashes Logo" class="logo-img">
+                </a>
+
+                <!-- Mobile Hamburger Toggle Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" 
+                        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible Navigation Menu -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    
+                    <!-- Main Navigation Links -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Swimming Lessons</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="programs.html">Swim Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="adult-programs.html">Adult Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Locations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <!-- Register/Sign In Button -->
+                    <div class="nav-cta ml-auto">
+                        <a href="signin.html" class="btn btn-register">
+                            Register / Sign In
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================================================
+         MAIN CONTENT AREA
+         - Contains all page sections
+    ============================================================ -->
+    <main>
+
+        <!-- ========================================
+             HERO SECTION
+             - Full-width background image
+             - Two video buttons
+        ======================================== -->
+        <section class="hero d-flex align-items-center justify-content-center">
+            <div class="hero-content text-center text-white">
+                <h1 class="hero-title">
+                    Learning it the Right Way,<br>
+                    Right from the Beginning
+                </h1>
+                <div class="hero-actions mt-5">
+                    <a href="#" class="btn btn-light mx-1">Informational Video</a>
+                    <a href="#" class="btn btn-light mx-1">Swimvenger Video</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             BANNERS SECTION
+             - Register Online banner (image)
+             - Now Hiring banner (image)
+        ======================================== -->
+        <section class="banners-section">
+            <div class="container">
+                <!-- Register Online Banner -->
+                <a href="#" class="banner-card register-banner" data-toggle="modal" data-target="#registerModal">
+                    <img src="assets/images/register-online-here-banner.png" 
+                         alt="Register Online Here"
+                         class="img-fluid">
+                </a>
+
+                <!-- Now Hiring Banner -->
+                <a href="#" class="banner-card hiring-banner">
+                    <img src="assets/images/ww-site-hiring-banner-resized.png" 
+                         alt="Now Hiring - Swim Instructors, Lifeguards, and Customer Service Representatives"
+                         class="img-fluid">
+                </a>
+            </div>
+        </section>
+
+        <!-- ========================================
+             HANDS ON TEACHING SECTION
+             - Desktop: Text on left, image on right
+             - Tablet/Mobile: White card with centered text
+        ======================================== -->
+        <section class="hands-on">
+            <div class="row no-gutters">
+                <!-- Text Content Column -->
+                <div class="col-lg-6">
+                    <div class="hands-on-content">
+                        <h2>Hands On Teaching</h2>
+                        <p>
+                            Splashes Swim School provides high quality swim instruction and the ideal environment for learning how to swim. Our swim instructors use specialized "muscle memory" teaching techniques that help our students progress at a quick rate. Grouped by age and ability, our students benefit from swim classes that offer personalized attention. It's never too late to learn to swim!
+                        </p>
+
+                        <h3>Splashes Offers:</h3>
+                        <ul>
+                            <li><a href="javascript:void(0)">Private Swimming Lessons</a> - All Locations</li>
+                            <li><a href="javascript:void(0)">Semi-Private Swimming Lessons</a> - All Locations</li>
+                            <li><a href="javascript:void(0)">Parent &amp; Me (Baby) Swimming Lessons</a> - Select Locations</li>
+                        </ul>
+
+                        <p>
+                            Select locations also offer additional swim programs such as swim competitions, swim teams, water aerobics, aquatic therapy, swim camps and more! To learn more about the Waterworks Family Swim School near you, select a location below.
+                        </p>
+
+                        <p>Ready to sign up?</p>
+
+                        <a href="javascript:void(0)" class="btn btn-primary btn-register-now" data-toggle="modal" data-target="#registerModal">
+                            REGISTER NOW
+                        </a>
+                    </div>
+                </div>
+                <!-- Image Column (desktop only) -->
+                <div class="col-lg-6 hands-on-image-col">
+                    <div class="hands-on-image" style="background-image: url('assets/images/home-hands-on-teaching.jpeg');"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             FIND A LOCATION SECTION
+             - Dark background image with text overlay on left
+             - Map image on right
+        ======================================== -->
+        <section class="find-location">
+            <div class="find-location-content">
+                <h2>Find a Splashes Swim School near you</h2>
+                <h3>Family Swim School Locations</h3>
+                <p>
+                    Splashes offers the finest professional swimming lessons from 21 swim schools and aquatic centers in California and Denver.
+                </p>
+                <a href="javascript:void(0)" class="btn btn-primary">Find a Location Near You</a>
+            </div>
+            <div class="find-location-map">
+                <img src="assets/images/home-our-locations-map.png" alt="Splashes Swim School Locations Map">
+            </div>
+        </section>
+
+        <!-- ========================================
+             AWARDS SECTION
+             - Grid of award images (3 per row on desktop)
+        ======================================== -->
+        <section class="awards">
+            <div class="container text-center">
+                <h2>Awards We've Won</h2>
+                <div class="awards-grid row justify-content-center">
+                    <!-- Row 1 -->
+                    <div class="col-4 col-md-4 col-lg-4 mb-4">
+                        <img src="assets/images/awards/best-of-la-kids-winner.jpeg" alt="Best of LA Kids Winner" class="img-fluid img-thumbnail rounded-circle">
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4 mb-4">
+                        <img src="assets/images/awards/bay-area-parent-gold2020.png" alt="Bay Area Parent Gold 2020" class="img-fluid img-thumbnail rounded-circle">
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4 mb-4">
+                        <img src="assets/images/awards/mla-swim-lessons-winner-2020-250x250.png" alt="MLA Most Loved 2020" class="img-fluid img-thumbnail rounded-circle">
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="col-4 col-md-4 col-lg-4 mb-4">
+                        <img src="assets/images/awards/colorado-parenting-family-fav2021.png" alt="Colorado Parenting Family Favorite 2021" class="img-fluid img-thumbnail rounded-circle">
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4 mb-4">
+                        <img src="assets/images/awards/best-colorado-community-media-2021.jpeg" alt="Best Colorado Community Media 2021" class="img-fluid img-thumbnail rounded-circle">
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4 mb-4">
+                        <img src="assets/images/awards/colorado-parenting-family-fav2020.png" alt="Colorado Parenting Family Favorite 2020" class="img-fluid img-thumbnail rounded-circle">
+                    </div>
+                    <!-- Row 3 -->
+                    <div class="col-4 col-md-4 col-lg-4 mb-4">
+                        <img src="assets/images/awards/bay-area-parent-2019.jpeg" alt="Bay Area Parent 2019" class="img-fluid img-thumbnail rounded-circle">
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4 mb-4">
+                        <img src="assets/images/awards/colorado-parenting-family-fav2019.jpeg" alt="Colorado Parenting Family Favorite 2019" class="img-fluid img-thumbnail rounded-circle">
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4 mb-4">
+                        <img src="assets/images/awards/gold-daisy-award-finalist-2018.jpeg" alt="Gold Daisy Award Finalist 2018" class="img-fluid img-thumbnail rounded-circle">
+                    </div>
+                    <!-- Row 4 - Last row-->
+                    <div class="col-4 col-md-4 col-lg-4 mb-4">
+                        <img src="assets/images/awards/best-of-the-best-2018.jpeg" alt="Best of the Best 2018" class="img-fluid img-thumbnail rounded-circle">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="container">
+                <!-- Wave Logo - Centered -->
+                <div class="footer-logo-wrapper">
+                    <img src="assets/images/wave-small.png" alt="Splashes Wave" class="footer-wave">
+                </div>
+
+                <!-- Footer Nav and Social Row -->
+                <div class="footer-nav-row">
+                    <!-- Footer Navigation - Left aligned -->
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="signin.html">Register / Sign In</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+
+                    <!-- Social Media Icons with original colors - Right aligned -->
+                    <div class="footer-social">
+                        <a href="#" class="social-linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-yelp" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+                        <a href="#" class="social-facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Locations Phone Numbers -->
+                <div class="footer-locations-wrapper">
+                    <div class="footer-locations">
+                        <div class="location-item">
+                            <strong>Orange County</strong>
+                            <a href="tel:9494500777">(949) 450-0777</a>
+                        </div>
+                        <div class="location-item">
+                            <strong>San Diego County</strong>
+                            <a href="tel:7604019400">(760) 603-9400</a>
+                        </div>
+                        <div class="location-item">
+                            <strong>Los Angeles County</strong>
+                            <a href="tel:6268361200">(626) 836-1200</a>
+                        </div>
+                        <div class="location-item">
+                            <strong>Northern California</strong>
+                            <a href="tel:4082791700">(408) 279-1700</a>
+                        </div>
+                        <div class="location-item">
+                            <strong>Denver</strong>
+                            <a href="tel:7203447700">(720) 344-7700</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom - Sponsors and Copyright -->
+        <div class="footer-bottom">
+            <div class="container">
+                <!-- Sponsor Logos -->
+                <div class="sponsors">
+                    <img src="assets/images/sponsors/footer-usssa-logo-2.png" alt="USSSA">
+                    <img src="assets/images/sponsors/footer-ndpa-logo.png" alt="NDPA">
+                    <img src="assets/images/sponsors/footer-member-issa-logo.png" alt="ISSA Member">
+                    <img src="assets/images/sponsors/footer-stop-drowning-now-logo.png" alt="Stop Drowning Now">
+                </div>
+
+                <!-- Copyright -->
+                <div class="copyright-wrapper">
+                    <p class="copy mb-0">&copy; 2022 Splashes.<br>All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         REGISTER/SIGN IN MODAL
+         - Bootstrap modal component
+         - Contains a form for registration/sign in
+    ============================================================ -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register / Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Registration Form -->
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label for="email">Email address <span class="required">*</span></label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password <span class="required">*</span></label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    </form>
+                    <hr>
+                    <p class="text-center mb-0">Don't have an account? <a href="signin.html">Register here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         JAVASCRIPT LIBRARIES
+    ============================================================ -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
