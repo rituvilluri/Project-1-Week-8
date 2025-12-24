@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Splashes Swimming School</title>
+    <title>Adult Lap Swimming | Splashes Swimming School</title>
 
     <!-- Bootstrap 4 CSS  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -22,12 +22,12 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body id="home">
+<body id="adult-programs">
 
     <!-- ============================================================
          HEADER & NAVIGATION
          - Sticky navbar that stays at top when scrolling
-         - Using Bootstrap navbar component with custom styling
+         - Uses Bootstrap navbar component with custom styling
     ============================================================ -->
     <header class="site-header">
         <nav class="navbar navbar-expand-xl navbar-dark">
@@ -58,7 +58,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="programs.html">Swim Programs</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="adult-programs.html">Adult Programs</a>
                         </li>
                         <li class="nav-item">
@@ -69,7 +69,7 @@
                         </li>
                     </ul>
 
-                    <!-- Register/Sign In Button -->
+                    <!-- Register/Sign In Button - White background -->
                     <div class="nav-cta ml-auto">
                         <a href="signin.html" class="btn btn-register">
                             Register / Sign In
@@ -83,152 +83,49 @@
 
     <!-- ============================================================
          MAIN CONTENT AREA
-         - Contains all page sections
     ============================================================ -->
     <main>
 
         <!-- ========================================
              HERO SECTION
-             - Full-width background image
-             - Two video buttons
+             - "Adult Lap Swimming" text overlay
         ======================================== -->
-        <section class="hero d-flex align-items-center justify-content-center">
-            <div class="hero-content text-center text-white">
-                <h1 class="hero-title">
-                    Learning it the Right Way,<br>
-                    Right from the Beginning
-                </h1>
-                <div class="hero-actions mt-5">
-                    <a href="#" class="btn btn-light mx-1">Informational Video</a>
-                    <a href="#" class="btn btn-light mx-1">Swimvenger Video</a>
-                </div>
+        <section class="page-hero" style="background-image: url('assets/images/lap-swimming.jpeg');">
+            <div class="page-hero-overlay"></div>
+            <div class="page-hero-content">
+                <h1>Adult Lap Swimming</h1>
             </div>
         </section>
 
         <!-- ========================================
-             BANNERS SECTION
-             - Register Online banner (image)
-             - Now Hiring banner (image)
+             ADULT LAP SWIMMING CONTENT SECTION
         ======================================== -->
-        <section class="banners-section">
+        <section class="content-section">
             <div class="container">
-                <!-- Register Online Banner -->
-                <a href="#" class="banner-card register-banner" data-toggle="modal" data-target="#registerModal">
-                    <img src="assets/images/register-online-here-banner.png" 
-                         alt="Register Online Here"
-                         class="img-fluid">
-                </a>
+                <div class="content-wrapper">
+                    <h2>Get Fit &amp; Stay Fit With Daily Lap Swimming</h2>
+                    
+                    <p>
+                        Adult lap swimming provides a full-body workout that targets the core, arms, back, and legs. It also provides swimmers with access to various training methods including strength training, aerobic training, and low-impact training.
+                    </p>
+                    
+                    <p>
+                        If you are looking to improve your workout routine, be sure to stop by a Splashes location to learn more about adult lap swimming. Swimmers will find that there are times throughout the week that will work with your schedule.
+                    </p>
+                    
+                    <p>
+                        Each lane will have up to two lap swimmers. Children under the age of 14 must be accompanied by their parent and able to swim 200 yards of the pool on their own. Lanes are limited during shared pool usage. No private swim instruction or coaching is permitted. No Lifeguard on duty. **NOTE: If you would like to reserve the entire lane for yourself, and not have to share with another swimmer, you may reserve both A and B slots for your selected lane/time.**
+                    </p>
 
-                <!-- Now Hiring Banner -->
-                <a href="#" class="banner-card hiring-banner">
-                    <img src="assets/images/ww-site-hiring-banner-resized.png" 
-                         alt="Now Hiring - Swim Instructors, Lifeguards, and Customer Service Representatives"
-                         class="img-fluid">
-                </a>
-            </div>
-        </section>
-
-        <!-- ========================================
-             HANDS ON TEACHING SECTION
-             - Desktop: Text on left, image on right
-             - Tablet/Mobile: White card with centered text
-        ======================================== -->
-        <section class="hands-on">
-            <div class="row no-gutters">
-                <!-- Text Content Column -->
-                <div class="col-lg-6">
-                    <div class="hands-on-content">
-                        <h2>Hands On Teaching</h2>
-                        <p>
-                            Splashes Swim School provides high quality swim instruction and the ideal environment for learning how to swim. Our swim instructors use specialized "muscle memory" teaching techniques that help our students progress at a quick rate. Grouped by age and ability, our students benefit from swim classes that offer personalized attention. It's never too late to learn to swim!
-                        </p>
-
-                        <h3>Splashes Offers:</h3>
-                        <ul>
-                            <li><a href="javascript:void(0)">Private Swimming Lessons</a> - All Locations</li>
-                            <li><a href="javascript:void(0)">Semi-Private Swimming Lessons</a> - All Locations</li>
-                            <li><a href="javascript:void(0)">Parent &amp; Me (Baby) Swimming Lessons</a> - Select Locations</li>
-                        </ul>
-
-                        <p>
-                            Select locations also offer additional swim programs such as swim competitions, swim teams, water aerobics, aquatic therapy, swim camps and more! To learn more about the Waterworks Family Swim School near you, select a location below.
-                        </p>
-
-                        <p>Ready to sign up?</p>
-
-                        <a href="javascript:void(0)" class="btn btn-primary btn-register-now" data-toggle="modal" data-target="#registerModal">
-                            REGISTER NOW
-                        </a>
-                    </div>
-                </div>
-                <!-- Image Column (desktop only) -->
-                <div class="col-lg-6 hands-on-image-col">
-                    <div class="hands-on-image" style="background-image: url('assets/images/home-hands-on-teaching.jpeg');"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================
-             FIND A LOCATION SECTION
-             - Dark background image with text overlay on left
-             - Map image on right
-        ======================================== -->
-        <section class="find-location">
-            <div class="find-location-content">
-                <h2>Find a Splashes Swim School near you</h2>
-                <h3>Family Swim School Locations</h3>
-                <p>
-                    Splashes offers the finest professional swimming lessons from 21 swim schools and aquatic centers in California and Denver.
-                </p>
-                <a href="javascript:void(0)" class="btn btn-primary">Find a Location Near You</a>
-            </div>
-            <div class="find-location-map">
-                <img src="assets/images/home-our-locations-map.png" alt="Splashes Swim School Locations Map">
-            </div>
-        </section>
-
-        <!-- ========================================
-             AWARDS SECTION
-             - Grid of award images (3 per row on desktop)
-        ======================================== -->
-        <section class="awards">
-            <div class="container text-center">
-                <h2>Awards We've Won</h2>
-                <div class="awards-grid row justify-content-center">
-                    <!-- Row 1 -->
-                    <div class="col-4 col-md-4 col-lg-4 mb-4">
-                        <img src="assets/images/awards/best-of-la-kids-winner.jpeg" alt="Best of LA Kids Winner" class="img-fluid img-thumbnail rounded-circle">
-                    </div>
-                    <div class="col-4 col-md-4 col-lg-4 mb-4">
-                        <img src="assets/images/awards/bay-area-parent-gold2020.png" alt="Bay Area Parent Gold 2020" class="img-fluid img-thumbnail rounded-circle">
-                    </div>
-                    <div class="col-4 col-md-4 col-lg-4 mb-4">
-                        <img src="assets/images/awards/mla-swim-lessons-winner-2020-250x250.png" alt="MLA Most Loved 2020" class="img-fluid img-thumbnail rounded-circle">
-                    </div>
-                    <!-- Row 2 -->
-                    <div class="col-4 col-md-4 col-lg-4 mb-4">
-                        <img src="assets/images/awards/colorado-parenting-family-fav2021.png" alt="Colorado Parenting Family Favorite 2021" class="img-fluid img-thumbnail rounded-circle">
-                    </div>
-                    <div class="col-4 col-md-4 col-lg-4 mb-4">
-                        <img src="assets/images/awards/best-colorado-community-media-2021.jpeg" alt="Best Colorado Community Media 2021" class="img-fluid img-thumbnail rounded-circle">
-                    </div>
-                    <div class="col-4 col-md-4 col-lg-4 mb-4">
-                        <img src="assets/images/awards/colorado-parenting-family-fav2020.png" alt="Colorado Parenting Family Favorite 2020" class="img-fluid img-thumbnail rounded-circle">
-                    </div>
-                    <!-- Row 3 -->
-                    <div class="col-4 col-md-4 col-lg-4 mb-4">
-                        <img src="assets/images/awards/bay-area-parent-2019.jpeg" alt="Bay Area Parent 2019" class="img-fluid img-thumbnail rounded-circle">
-                    </div>
-                    <div class="col-4 col-md-4 col-lg-4 mb-4">
-                        <img src="assets/images/awards/colorado-parenting-family-fav2019.jpeg" alt="Colorado Parenting Family Favorite 2019" class="img-fluid img-thumbnail rounded-circle">
-                    </div>
-                    <div class="col-4 col-md-4 col-lg-4 mb-4">
-                        <img src="assets/images/awards/gold-daisy-award-finalist-2018.jpeg" alt="Gold Daisy Award Finalist 2018" class="img-fluid img-thumbnail rounded-circle">
-                    </div>
-                    <!-- Row 4 - Last row-->
-                    <div class="col-4 col-md-4 col-lg-4 mb-4">
-                        <img src="assets/images/awards/best-of-the-best-2018.jpeg" alt="Best of the Best 2018" class="img-fluid img-thumbnail rounded-circle">
-                    </div>
+                    <h3 class="locations-heading">Find Lap Swimming Near You</h3>
+                    <ul class="location-links">
+                        <li><a href="#">Irvine</a></li>
+                        <li><a href="#">Huntington Beach</a></li>
+                        <li><a href="#">Carlsbad</a></li>
+                        <li><a href="#">Pasadena</a></li>
+                        <li><a href="#">San Jose</a></li>
+                        <li><a href="#">Denver/Highlands Ranch</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -269,7 +166,7 @@
                     </div>
                 </div>
 
-                <!-- Locations Phone Numbers -->
+                <!-- Location Phone Numbers with divider lines -->
                 <div class="footer-locations-wrapper">
                     <div class="footer-locations">
                         <div class="location-item">
@@ -319,7 +216,7 @@
     <!-- ============================================================
          REGISTER/SIGN IN MODAL
          - Bootstrap modal component
-         - Contains a form for registration/sign in
+         - Contains form for registration/sign in
     ============================================================ -->
     <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -334,11 +231,11 @@
                     <!-- Registration Form -->
                     <form id="registerForm">
                         <div class="form-group">
-                            <label for="email">Email address <span class="required">*</span></label>
+                            <label for="email">Email address</label>
                             <input type="email" class="form-control" id="email" placeholder="Enter email" required>
                         </div>
                         <div class="form-group">
-                            <label for="password">Password <span class="required">*</span></label>
+                            <label for="password">Password</label>
                             <input type="password" class="form-control" id="password" placeholder="Password" required>
                         </div>
                         <div class="form-group form-check">
@@ -365,3 +262,4 @@
 </body>
 
 </html>
+

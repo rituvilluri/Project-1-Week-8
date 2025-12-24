@@ -1,0 +1,308 @@
+/* ============================================================
+    SIGN IN PAGE STYLING
+   ============================================================ */
+
+/* =========================
+given colors from style guide
+========================= */
+:root {
+    --color-white: #FFFFFF;
+    --color-light-gray: #E4EAEA;
+    --color-dark-navy: #1A2E38;
+    --color-gray: #444444;
+    --color-primary-blue: #03B1F4;
+    --color-light-blue: #B3E5F5;
+    --color-red: #FF0000;
+    
+    --font-heading: 'Bodoni Moda', serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-light-gray);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* =========================
+   SIGN IN PAGE LAYOUT
+========================= */
+.signin-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Splashes Logo at Top - Centered */
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.splashes-logo {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Main Container - Holds the card with shark */
+.signin-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Shark Mascot */
+.shark-mascot {
+    position: absolute;
+    top: -35px;
+    left: -50px;
+    z-index: 10;
+}
+
+.shark-mascot img {
+    width: 120px;
+    height: auto;
+    display: block;
+}
+
+/* Sign In Card */
+.signin-card {
+    background-color: var(--color-white);
+    padding: 50px 70px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.signin-card h1 {
+    font-family: var(--font-body);
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--color-dark-navy);
+    text-align: center;
+    margin-bottom: 35px;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   FORM STYLING
+========================= */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-gray);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group label .required {
+    color: var(--color-red);
+    margin-left: 2px;
+}
+
+.form-control {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 15px 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    background-color: var(--color-light-gray);
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--color-primary-blue);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(3, 177, 244, 0.1);
+    background-color: var(--color-white);
+}
+
+/* Forgot Password */
+.forgot-password-wrapper {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.forgot-password {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-primary-blue);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #028acc;
+}
+
+/* =========================
+   BUTTONS STYLING
+========================= */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.btn {
+    flex: 1;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Sign In Button - Default (Greyed) */
+.btn-signin {
+    background-color: var(--color-light-blue);
+    color: var(--color-white);
+    border-color: var(--color-light-blue);
+    opacity: 0.6;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+}
+
+.btn-signin:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Sign In Button - Active (when fields are filled) */
+.btn-signin.active:not(:disabled) {
+    background-color: var(--color-primary-blue);
+    border-color: var(--color-primary-blue);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.btn-signin:hover:not(:disabled) {
+    background-color: #028acc;
+    border-color: #028acc;
+    color: var(--color-white);
+}
+
+.btn-signin.active:hover:not(:disabled) {
+    background-color: #028acc;
+    border-color: #028acc;
+}
+
+/* Sign Up Button - Outlined */
+.btn-signup {
+    background-color: transparent;
+    color: var(--color-primary-blue);
+    border-color: var(--color-primary-blue);
+}
+
+.btn-signup:hover {
+    background-color: var(--color-primary-blue);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Desktop - Layout stays fixed at all widths 769px and up  */
+@media (min-width: 769px) {
+    .splashes-logo {
+        width: 280px;
+        max-width: 280px;
+    }
+
+    .signin-container {
+        width: 800px;
+        max-width: 800px;
+    }
+
+    .shark-mascot {
+        top: -35px;
+        left: -40px;
+    }
+
+    .shark-mascot img {
+        width: 120px;
+    }
+
+    .signin-card {
+        padding: 55px 80px;
+        width:800px;
+        max-width:800px;
+    }
+}
+
+/* Tablet and Mobile (768px and below) */
+@media (max-width: 768px) {
+    body {
+        padding: 30px 15px;
+        justify-content: flex-start;
+        padding-top: 40px;
+    }
+    
+    .logo-container {
+        margin-bottom: 20px;
+    }
+    
+    .splashes-logo {
+        max-width: 280px;
+    }
+    
+    .signin-container {
+        max-width: 500px;
+        width: 90%;
+    }
+    
+    .shark-mascot {
+        top: -35px;
+        left: -50px;
+    }
+    
+    .shark-mascot img {
+        width: 120px;
+    }
+    
+    .signin-card {
+        padding: 45px 40px;
+        max-width: 100%;
+    }
+    
+    .signin-card h1 {
+        font-size: 1.9rem;
+        margin-bottom: 30px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
