@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adult Lap Swimming | Splashes Swimming School</title>
+    <title>Swimming Lessons | Splashes Swimming School</title>
 
     <!-- Bootstrap 4 CSS  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -15,19 +15,21 @@
     <!-- Google Fonts - Bodoni Moda for headings, Open Sans for body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body id="adult-programs">
+<body id="swim-lessons">
 
     <!-- ============================================================
          HEADER & NAVIGATION
          - Sticky navbar that stays at top when scrolling
-         - Uses Bootstrap navbar component with custom styling
+         - Using Bootstrap navbar component with custom styling
     ============================================================ -->
     <header class="site-header">
         <nav class="navbar navbar-expand-xl navbar-dark">
@@ -39,37 +41,37 @@
                 </a>
 
                 <!-- Mobile Hamburger Toggle Button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" 
-                        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- Collapsible Navigation Menu -->
                 <div class="collapse navbar-collapse" id="mainNavbar">
-                    
+
                     <!-- Main Navigation Links -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="swimlessons.html">Swimming Lessons</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Swim Programs</a>
+                            <a class="nav-link" href="programs.html">Swim Programs</a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="adult-programs.html">Adult Programs</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Locations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link" href="contact.html">Contact Us</a>
                         </li>
                     </ul>
 
-                    <!-- Register/Sign In Button - White background -->
+                    <!-- Register/Sign In Button -->
                     <div class="nav-cta ml-auto">
                         <a href="signin.html" class="btn btn-register">
                             Register / Sign In
@@ -88,44 +90,33 @@
 
         <!-- ========================================
              HERO SECTION
-             - "Adult Lap Swimming" text overlay
+             - "Which Lesson is Best?" text overlay
         ======================================== -->
-        <section class="page-hero" style="background-image: url('assets/images/lap-swimming.jpeg');">
+        <section class="page-hero" style="background-image: url('assets/images/which-lesson-is-best.jpeg');">
             <div class="page-hero-overlay"></div>
             <div class="page-hero-content">
-                <h1>Adult Lap Swimming</h1>
+                <h1>Which Lesson is Best?</h1>
             </div>
         </section>
 
         <!-- ========================================
-             ADULT LAP SWIMMING CONTENT SECTION
+             OUR LESSON TYPES SECTION
+             - Vue.js Table Component
         ======================================== -->
         <section class="content-section">
             <div class="container">
                 <div class="content-wrapper">
-                    <h2>Get Fit &amp; Stay Fit With Daily Lap Swimming</h2>
-                    
-                    <p>
-                        Adult lap swimming provides a full-body workout that targets the core, arms, back, and legs. It also provides swimmers with access to various training methods including strength training, aerobic training, and low-impact training.
-                    </p>
-                    
-                    <p>
-                        If you are looking to improve your workout routine, be sure to stop by a Splashes location to learn more about adult lap swimming. Swimmers will find that there are times throughout the week that will work with your schedule.
-                    </p>
-                    
-                    <p>
-                        Each lane will have up to two lap swimmers. Children under the age of 14 must be accompanied by their parent and able to swim 200 yards of the pool on their own. Lanes are limited during shared pool usage. No private swim instruction or coaching is permitted. No Lifeguard on duty. **NOTE: If you would like to reserve the entire lane for yourself, and not have to share with another swimmer, you may reserve both A and B slots for your selected lane/time.**
+                    <h2>Our Lesson Types</h2>
+
+                    <p class="mb-4">
+                        Splashes offers a variety of swim lesson programs to meet your needs. Compare our lesson types
+                        below to find the best fit for you or your child.
                     </p>
 
-                    <h3 class="locations-heading">Find Lap Swimming Near You</h3>
-                    <ul class="location-links">
-                        <li><a href="#">Irvine</a></li>
-                        <li><a href="#">Huntington Beach</a></li>
-                        <li><a href="#">Carlsbad</a></li>
-                        <li><a href="#">Pasadena</a></li>
-                        <li><a href="#">San Jose</a></li>
-                        <li><a href="#">Denver/Highlands Ranch</a></li>
-                    </ul>
+                    <!-- Vue.js Table Component -->
+                    <div id="lessonTypesApp">
+                        <lesson-types-table></lesson-types-table>
+                    </div>
                 </div>
             </div>
         </section>
@@ -166,7 +157,7 @@
                     </div>
                 </div>
 
-                <!-- Location Phone Numbers with divider lines -->
+                <!-- Locations Phone Numbers -->
                 <div class="footer-locations-wrapper">
                     <div class="footer-locations">
                         <div class="location-item">
@@ -216,7 +207,7 @@
     <!-- ============================================================
          REGISTER/SIGN IN MODAL
          - Bootstrap modal component
-         - Contains form for registration/sign in
+         - Contains a form for registration/sign in
     ============================================================ -->
     <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -231,11 +222,11 @@
                     <!-- Registration Form -->
                     <form id="registerForm">
                         <div class="form-group">
-                            <label for="email">Email address</label>
+                            <label for="email">Email address <span class="required">*</span></label>
                             <input type="email" class="form-control" id="email" placeholder="Enter email" required>
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
+                            <label for="password">Password <span class="required">*</span></label>
                             <input type="password" class="form-control" id="password" placeholder="Password" required>
                         </div>
                         <div class="form-group form-check">
@@ -252,14 +243,57 @@
     </div>
 
     <!-- ============================================================
+         INTEREST FORM MODAL
+         - Bootstrap modal for lesson interest form
+         - Auto-fills lesson type based on button clicked
+    ============================================================ -->
+    <div class="modal fade" id="interestFormModal" tabindex="-1" aria-labelledby="interestFormModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="interestFormModalLabel">Express Interest in Swim Lessons</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="interestForm" @submit.prevent="handleFormSubmit">
+                        <div class="form-group">
+                            <label for="interestName">Name <span class="required">*</span></label>
+                            <input type="text" class="form-control" id="interestName" placeholder="Enter your name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interestPhone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" class="form-control" id="interestPhone"
+                                placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interestLessonType">Lesson Type</label>
+                            <input type="text" class="form-control" id="interestLessonType"
+                                readonly style="background-color: #f8f9fa;">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit Interest</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
          JAVASCRIPT LIBRARIES
     ============================================================ -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
     <script src="js/main.js"></script>
+    <script src="js/swimlessons.js"></script>
 
 </body>
 
 </html>
-
