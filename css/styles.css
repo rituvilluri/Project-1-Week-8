@@ -1264,3 +1264,154 @@ a:hover {
         margin-top: 15px;
     }
 }
+/* ==============================================
+   SWIM LESSONS TABLE - VUE COMPONENT
+============================================== */
+.lesson-types-table-wrapper {
+    margin: 40px 0;
+}
+
+.lesson-types-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.lesson-types-table thead {
+    background-color: var(--color-dark-navy);
+    color: var(--color-white);
+}
+
+.lesson-types-table thead th {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 20px 15px;
+    text-align: left;
+    border-bottom: 2px solid var(--color-primary-blue);
+}
+
+.lesson-types-table tbody tr {
+    border-bottom: 1px solid var(--color-light-gray);
+    transition: background-color 0.3s ease;
+}
+
+.lesson-types-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.lesson-types-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.lesson-types-table tbody td {
+    padding: 20px 15px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-gray);
+    vertical-align: top;
+}
+
+.lesson-types-table tbody td:first-child {
+    font-weight: 700;
+    color: var(--color-dark-navy);
+    /* min-width: 180px; */
+    width: 15%;
+}
+
+.lesson-types-table tbody td:nth-child(2) {
+    /* min-width: 150px; */
+    width: 12%;
+    color: var(--color-primary-blue);
+    font-weight: 600;
+}
+
+.lesson-types-table tbody td:nth-child(3) {
+    /* min-width: 400px; */
+    width: 50%;
+}
+
+.lesson-types-table tbody td:last-child {
+    text-align: center;
+    /* min-width: 140px; */
+    width: 15%;
+}
+
+.lesson-types-table .btn {
+    white-space: nowrap;
+}
+
+/* Responsive Table Styles */
+@media (min-width: 1200px) {
+    .lesson-types-table-wrapper {
+        overflow-x: visible;
+        /* Ensure no scrolling */
+    }
+
+    .lesson-types-table {
+        width: 100%;
+        table-layout: auto;
+        /* Let table size naturally */
+    }
+
+    .lesson-types-table tbody td:first-child {
+        min-width: auto;
+        width: 15%;
+    }
+
+    .lesson-types-table tbody td:nth-child(2) {
+        min-width: auto;
+        width: 12%;
+    }
+
+    .lesson-types-table tbody td:nth-child(3) {
+        min-width: auto;
+        width: 50%;
+    }
+
+    .lesson-types-table tbody td:last-child {
+        min-width: auto;
+        width: 15%;
+    }
+}
+@media (max-width: 1199.98px) {
+    .lesson-types-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .lesson-types-table {
+        min-width: 800px;
+    }
+
+    .lesson-types-table thead th,
+    .lesson-types-table tbody td {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .lesson-types-table {
+        min-width: 700px;
+    }
+
+    .lesson-types-table thead th {
+        font-size: 0.95rem;
+        padding: 12px 8px;
+    }
+
+    .lesson-types-table tbody td {
+        padding: 12px 8px;
+        font-size: 0.85rem;
+    }
+
+    .lesson-types-table .btn {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+}
+
